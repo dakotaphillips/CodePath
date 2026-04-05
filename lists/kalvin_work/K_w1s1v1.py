@@ -26,6 +26,12 @@
 
 
 
+# def hello_world():
+#     print('Hello World')
+
+# hello_world()
+
+
 
 
 
@@ -48,6 +54,12 @@
 
 
 
+# def todays_mood():
+#     mood = ">:)"
+#     print("Today's mood: " + mood)
+
+# todays_mood()
+
 
 
 
@@ -63,6 +75,10 @@
 # Example Output: Lunch today is: 🍕
 
 
+# def print_menu(menu):
+#     print("Lunch today is: " + menu)
+
+# print_menu('PIZZA')
 
 
 
@@ -83,8 +99,10 @@
 # Example Output: 56
 
 
+# def sum(a,b):
+#     return a + b
 
-
+# print(sum(sum(13, 27), sum(13,27)))
 
 
 
@@ -100,8 +118,10 @@
 
 
 
+# def product(a , b):
+#     return a * b
 
-
+# print(product(22, 7))
 
 
 
@@ -125,11 +145,20 @@
 # adult
 
 
+# write function called classify_age()
+# that takes an int perameter
+# if age < 18 print 'child'
+# else print 'adult'
 
 
+# def classify_age(age):
+#     if age < 18:
+#         print('child')
+#     else:
+#         print('adult')
 
-
-
+# classify_age(17)
+# classify_age(27)
 
 #------------------------------------------------------------------------------------------------------------------
 
@@ -155,8 +184,21 @@
 # peanut butter jelly time 🥪
 
 
+# def what_time_is_it(time: int):
+#     if time == 2:
+#         return "taco time 🌮"
+#     elif time == 12:
+#         return "peanut butter jelly time 🥪"
+#     else:
+#         return "nap time 😴"
 
 
+# time = what_time_is_it(2)
+# print(time)
+# time = what_time_is_it(7)
+# print(time)
+# time = what_time_is_it(12)
+# print(time)
 
 
 
@@ -165,7 +207,8 @@
 
 
 # Problem 8: Blackjack
-# In the game Blackjack, players try to draw a hand of cards that totals as close to 21 as possible. Players "bust" if their cards total more than 21. Players say "Hit me!" if they want the dealer to give them another card.
+# In the game Blackjack, players try to draw a hand of cards that totals as close to 21 as possible. Players "bust" if their cards total more than 21. Players say "Hit me!" 
+# if they want the dealer to give them another card.
 
 # Write a function called blackjack() that takes an integer score as a parameter.
 # If score equals 21, print "Blackjack!".
@@ -188,6 +231,22 @@
 
 
 
+# def blackjack(score: int):
+#     if score == 21:
+#         print("Blackjack!")
+#     elif score > 21:
+#         print("Bust!")
+#     elif score >= 17 and score <= 21:
+#         print("Nice Hand!")
+#     else:
+#         print("Hit Me!")
+
+# blackjack(21)
+# blackjack(24)
+# blackjack(19)
+# blackjack(10)
+
+
 
 
 
@@ -206,10 +265,15 @@
 
 # Note: pass is a keyword that is used as a placeholder for future code
 
+# def get_first(lst):
+#     if lst:
+#         return lst[0]
+#     else:
+#         return None
 
 
-
-
+# lst = [3,1,6,7,5]
+# print(get_first(lst))
 
 
 
@@ -225,11 +289,21 @@
 # Example Output: 5
 
 
+# # write function with a lst peram
+# def get_last(lst):
 
+# # check if list is not empty 
+#     if lst:
+# # return last element in the list
+#         return lst[-1]
+#         # return lst[len(lst)-1] : second option for returning the last element in a list.
+# # else return none
+#     else:
+#         return None
+    
+# lst = [3,1,6,7,5]
 
-
-
-
+# print(get_last(lst))
 
 #------------------------------------------------------------------------------------------------------------------
 
@@ -251,10 +325,13 @@
 
 
 
+# def counter(stop):
+#     for n in range(1, stop + 1):
+#         print(n)
 
 
-
-
+# stop = 7
+# counter(stop)
 
 #------------------------------------------------------------------------------------------------------------------
 
@@ -268,7 +345,16 @@
 # Example Result: output = 55
 
 
+#def sum_ten():
+    # n = sum([1,2,3,4,5,6,7,8,9,10])
 
+#     num_sum = 0
+#     for n in range(1, 11):
+#         num_sum += n
+#     return num_sum
+
+# output = sum_ten()
+# print(output)
 
 
 
@@ -286,6 +372,13 @@
 # Example Result: sum = 21
 
 
+# def sum_positive_range(stop):
+#     num_sum = 0
+#     for n in range(1, stop + 1):   
+#         num_sum += n
+#     return num_sum
+
+# print(sum_positive_range(6))
 
 
 
@@ -304,7 +397,15 @@
 # Example Result: sum = 42
 
 
+# def sum_range(start, stop):
+#     # num_sum = 0
+#     # for n in range(start, stop +1):
+#     #     num_sum += n
+#     # return num_sum
 
+
+
+# print(sum_range(3,9))
 
 
 
@@ -327,10 +428,22 @@
 
 # None
 
+# def print_negatives(lst):
+#     neg_num = None
+#     for num in lst:
+#         if num < 0:
+#             print(num)
+#             neg_num = num
+    
+#     if neg_num == None:
+#         print(neg_num) 
+    
 
+# lst_1 = [3,-2,2,1,-5]
+# lst_2 = [1,2,3,4,5]
 
-
-
+# print_negatives(lst_1)
+# print_negatives(lst_2)
 
 
 
