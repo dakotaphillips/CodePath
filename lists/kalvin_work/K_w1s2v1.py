@@ -2,7 +2,8 @@
 
 # -------------------------------------------------------------------------------------------
 # Problem 1: Print List
-# Write a function print_list() that takes in a list lst as a parameter and prints out each item in the list.
+# Write a function print_list() that takes in a list lst as a parameter and prints out 
+# each item in the list.
 
 # def print_list(lst):
 #     pass
@@ -14,13 +15,17 @@
 # charizard
 # pikachu
 
+# def print_list(lst):
+#     for p in lst:
+#         print(p)
 
-
-
+# lst = ["squirtle", "gengar", "charizard", "pikachu"]
+# print_list(lst)
 
 # -------------------------------------------------------------------------------------------
 # Problem 2: Print Doubled List Items
-# Write a function doubled() that takes in a list of integers lst as a parameter and prints each item in the list multiplied by two.
+# Write a function doubled() that takes in a list of integers lst as a parameter and 
+# prints each item in the list multiplied by two.
 
 # def doubled(lst):
 #     pass
@@ -31,14 +36,19 @@
 # 4
 # 6
 
+# def doubled(lst):
+#     for n in lst:
+#         print(n * 2)
 
+# lst = [1,2,3]
 
-
+# doubled(lst)
 
 
 # -------------------------------------------------------------------------------------------
 # Problem 3: Return Doubled List
-# Modify the function doubled() so that instead of printing the items, it returns a new list of the doubled numbers.
+# Modify the function doubled() so that instead of printing the items, 
+# it returns a new list of the doubled numbers.
 
 # Example Usage:
 
@@ -49,13 +59,24 @@
 
 # [2, 4, 6]
 
+# def doubled(lst):
+#     new_lst = []
+#     for n in lst:
+#         new_lst.append(n*2)
+#     return new_lst
+
+
+# lst = [1,2,3]
+# new_lst = doubled(lst)
+# print(new_lst)
 
 
 
 
 # -------------------------------------------------------------------------------------------
 # Problem 4: Flip Signs
-# Write a function flip_sign() that takes in a list of integers lst as a parameter and returns a new list where each number in the original list has been multiplied by -1.
+# Write a function flip_sign() that takes in a list of integers lst as a parameter 
+# and returns a new list where each number in the original list has been multiplied by -1.
 
 # def flip_sign(lst):
 #     pass
@@ -68,13 +89,24 @@
 
 # [-1, 2, 3, -4]
 
+# def flip_sign(lst):
+#     flip_list = []
+#     for n in lst:
+#         flip_list.append(n*-1)
 
+#     return flip_list
+
+
+# lst = [1,-2,-3,4]
+# flipped_lst = flip_sign(lst)
+# print(flipped_lst)
 
 
 
 # -------------------------------------------------------------------------------------------
 # Problem 5: Max Difference
-# Write a function max_difference() that takes in a list of integers lst and returns the difference between the smallest and largest value in the list.
+# Write a function max_difference() that takes in a list of integers lst and returns 
+# the difference between the smallest and largest value in the list.
 
 # def max_difference(lst):
 #     pass
@@ -85,13 +117,24 @@
 # print(max_diff)
 # Example Output: 20
 
+# def max_difference(lst):
+#     return max(lst) - min(lst)
 
+#     # lst.sort()
+#     # diff = lst[-1] - lst[0]
+#     # print(lst)
+#     # return diff
 
+# lst = [5,22,8,10,2]
+# max_diff = max_difference(lst)
+# print(max_diff)
 
 
 # -------------------------------------------------------------------------------------------
 # Problem 6: Below Threshold
-# Write a function count_less_than() that takes in a list of integers numbers and an integer threshold as parameters and returns the number of items in numbers that are less than threshold.
+# Write a function count_less_than() that takes in a list of integers numbers 
+# and an integer threshold as parameters and returns the number of items in 
+# numbers that are less than threshold.
 
 # def count_less_than(numbers, threshold):
 #     pass
@@ -102,13 +145,23 @@
 # print(counter)
 # Example Output: 3
 
+# def count_less_than(numbers, threshold):
+#     total = 0
+#     for num in numbers:
+#         if num < threshold:
+#             total += 1
+#     return total
 
+# numbers = [12,8,2,4,4,10]
+# counter = count_less_than(numbers,5)
+# print(counter)
 
 
 
 # -------------------------------------------------------------------------------------------
 # Problem 7: Evens List
-# Write a function get_evens() that takes in a list of integers lst as a parameter and returns a list of all even numbers in the list.
+# Write a function get_evens() that takes in a list of integers lst as a parameter 
+# and returns a list of all even numbers in the list.
 
 # def get_evens(lst):
 #     pass
@@ -121,7 +174,13 @@
 
 # [2, 4]
 
+# def get_evens(lst):
+#     return [i for i in lst if i % 2 == 0]
 
+
+# lst = [1,2,3,4]
+# evens_lst = get_evens(lst)
+# print(evens_lst)
 
 
 
@@ -143,13 +202,18 @@
 # 95
 # 100
 
+# def multiples_of_five():
+#     mult = 5
+#     while mult <= 100:
+#         print(mult)
+#         mult += 5
 
-
-
+# multiples_of_five()
 
 # -------------------------------------------------------------------------------------------
 # Problem 9: Divisors
-# Write a function find_divisors() that takes in an integer n as a parameter that returns a list of all divisors of n.
+# Write a function find_divisors() that takes in an integer n as a parameter
+# that returns a list of all divisors of n.
 
 # def find_divisors(n):
 #     pass
@@ -161,7 +225,16 @@
 
 # [1, 2, 3, 6]
 
+# def find_divisors(n):
+#     div = []
+#     for num in range(1, n+1):
+#         if n % num == 0:
+#             div.append(num)
+#     return div
 
+
+# lst = find_divisors(6)
+# print(lst)
 
 
 
