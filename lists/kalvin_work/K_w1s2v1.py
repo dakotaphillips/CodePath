@@ -240,7 +240,8 @@
 
 # -------------------------------------------------------------------------------------------
 # Problem 10: FizzBuzz
-# Write a function fizzbuzz() that takes in an integer n as a parameter and prints the numbers from 1 to n.
+# Write a function fizzbuzz() that takes in an integer n as a parameter 
+# and prints the numbers from 1 to n.
 # For multiples of 3, print "Fizz" instead of the number.
 # For multiples of 5, print "Buzz" instead of the number.
 
@@ -264,13 +265,24 @@
 # Fizz
 # 13
 
+# def fizzbuzz(n):
+#     for n in range(1,n+1):
+#         if n % 3 == 0 and n % 5 == 0:
+#             print("Fizz Buzz")
+#         elif n % 3 == 0:
+#             print("Fizz")
+#         elif n % 5 == 0:
+#             print("Buzz")
+#         else:
+#             print(n)
 
-
+# fizzbuzz(15)
 
 
 # -------------------------------------------------------------------------------------------
 # Problem 11: Print the Index
-# Write a function print_indices() that takes in an integer list lst as a parameter and prints out the index of each item in the given list.
+# Write a function print_indices() that takes in an integer
+# list lst as a parameter and prints out the index of each item in the given list.
 # Use the function range() to loop through the list indices.
 
 # def print_indices(lst):
@@ -287,14 +299,19 @@
 # 3
 # 4
 
+# def print_indices(lst):
+#     for i in range(0, len(lst)):
+#         print(i)
 
-
-
+# lst = [5,1,3,8,2]
+# print_indices(lst)
 
 
 # -------------------------------------------------------------------------------------------
 # Problem 12: Linear Search
-# Write a function linear_search() that takes in a list lst and value target as parameters. The function returns the index of target in lst if found. If target is not found in lst, return -1.
+# Write a function linear_search() that takes in a list lst 
+# and value target as parameters. The function returns the index of 
+# target in lst if found. If target is not found in lst, return -1.
 
 # def linear_search(lst, target):
 #     pass
@@ -314,8 +331,21 @@
 # Example Output: -1
 
 
+# def linear_search(lst, target):
+#     if target not in lst:
+#         return -1
+#     else:
+#         for i, num in enumerate(lst):
+#             if num == target:
+#                 return i
 
 
+# lst = [1,4,5,2,8]
+# position = linear_search(lst,5)
+# print(position)
 
 
+# lst = [1,4,5,2,8]
+# position = linear_search(lst,10)
+# print(position)
 
