@@ -172,45 +172,7 @@
 # genre, and rating. The function calculates the average rating for each genre 
 # and returns the genre with the highest average rating.
 
-#  ok
-def most_popular_genre(movies):
-    genre_ratings = {}
-    for movie in movies:
-        if movie["genre"] not in genre_ratings:
-            genre_ratings[movie["genre"]] = [movie["rating"]] 
-        else:
-            genre_ratings[movie["genre"]].append(movie["rating"])
-    
-    large_avg = 0
-    genre = ""
-    for k, v in genre_ratings.items():
-        summed = sum(v)/len(v)
-        if summed > large_avg:
-            large_avg = summed
-            genre = k
-    return genre
-
-
-movies = [
-    {"title": "Inception",
-     "genre": "Science Fiction",
-     "rating": 8.8
-    },
-    {"title": "The Matrix", 
-     "genre": "Science Fiction",
-     "rating": 8.7
-    },
-    {"title": "Pride and Prejudice", 
-     "genre": "Romance",
-     "rating": 7.8
-    },
-    {"title": "Sense and Sensibility", 
-     "genre": "Romance",
-     "rating": 7.7
-    }
-]
-
-print(most_popular_genre(movies))
+#  
 
 # Example Output: Science Fiction
 
@@ -224,11 +186,17 @@ print(most_popular_genre(movies))
 # If the product has a score less than threshold, the function categorizes it as a "fail".
 # The function returns a new dictionary where the key-value pair is the product ID and whether it is a "pass" or "fail".
 
-def quality_control(product_scores, threshold):
-    pass
+# def quality_control(product_scores, threshold):
+#     pass_fail = {}
+#     for product, score in product_scores.items():
+#         if score >= threshold:
+#             pass_fail[product] = "pass"
+#         else: 
+#             pass_fail[product] = "fail"
+#     return pass_fail
 
-product_scores = {"x0123": 75, "x0124": 40, "x0125": 90, "x0126": 55}
-threshold = 60
+# product_scores = {"x0123": 75, "x0124": 40, "x0125": 90, "x0126": 55}
+# threshold = 60
 # print(quality_control(product_scores, threshold))
 
 # Example Output: {'x0123': 'pass', 'x0124': 'fail', 'x0125': 'pass', 'x0126': 'fail'}
