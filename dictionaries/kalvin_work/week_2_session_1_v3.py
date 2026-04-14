@@ -1,0 +1,248 @@
+# Problem Set Version 3
+
+# Problem 1: Mountain Peak
+
+# A mountain list is defined as a list that has at least three elements, 
+# where there exists some i with 0 < i < len(lst)-1 such that 
+# lst[0] < lst[1] < ... lst[i-1] < lst[i] and lst[i] > lst[i+1] > ... > lst[len(lst)-1].
+
+# Given such a mountain list lst as a parameter, write a function that finds and 
+# returns the highest peak (the index i of the maximum element).
+
+# def peak_index_in_mountain_list(lst):
+#     # for i in range(1, len(lst)-1):
+#     #     if lst[i] > lst[i-1] and lst[i] > lst[i+1]:
+#     #         return i
+#     return lst.index(max(lst))
+
+
+
+# mountain_lst = [0,3,8,0]
+# peak = peak_index_in_mountain_list(mountain_lst)
+# print(peak)
+
+# Example Output: 2
+
+# -------------------------------------------------------------------------------------------
+# Problem 2: Build Inventory
+
+# Write a function build_inventory() that takes in a list of product_names 
+# and a corresponding list of product_prices as parameters. The function returns
+# a dictionary representing the inventory of a small store. Each product name 
+# in product_names should be a key in the dictionary and the corresponding 
+# value should be the item price.
+
+# product_names[i] should be paired with product_prices[i] in the dictionary 
+# where 0 <= i <= len(product_names). You may assume that product_names 
+# and product_prices are the same length.
+
+# product_names = keys
+# product_prices = values
+# loop through both lists 
+# use zip to turn them into a dict
+# return the new dict 
+# def build_inventory(product_names, product_prices):
+#     return dict(zip(product_names, product_prices))
+    
+
+
+# product_names = ["Apple", "Banana", "Orange"]
+# product_prices = [0.99, 0.50, 0.75]
+# print(build_inventory(product_names, product_prices))
+
+# Example Output:
+# {'Apple': 0.99, 'Banana': 0.5, 'Orange': 0.75}
+
+# -------------------------------------------------------------------------------------------
+# Problem 3: Update or Warn
+
+# Write a function update_or_warn() that takes in a dictionary records, 
+# a key item, and a new value update_value as parameters. The function 
+# updates the value of item in records with update_value if item exists. 
+# If item does not exist, it should print "<item> not found!" and not 
+# modify the dictionary.
+
+# check if item in dict
+# if true: updated the value with the new value
+# else: print(f"{item} not found."") 
+# def update_or_warn(records, item, update_value):
+#     if item in records:
+#         records[item] = update_value
+#     else:
+#         print(f"{item} is not in records.")
+
+
+# records = {"apple": 1, "banana": 2, "orange": 3}
+# update_or_warn(records, "grape", 4)
+# # Print the input dictionary after running the function to check if it was modified
+# print(records) 
+# update_or_warn(records, "banana", 5)
+# print(records)
+
+# Example Output:
+# grape not found!
+# {'apple': 1, 'banana': 2, 'orange': 3}
+# {'apple': 1, 'banana': 5, 'orange': 3}
+
+# -------------------------------------------------------------------------------------------
+# Problem 4: Attendance Rate
+
+# Write a function attendance_rate() that takes in a dictionary attendance_list 
+# as a parameter. The function maps student names to their attendance status 
+# ("Present" or "Absent"), and returns the percentage of students who are present.
+
+# def attendance_rate(attendance_list):
+#     present = 0
+#     absent = 0
+#     for key, value in attendance_list.items():
+#         if value == "Present":
+#             present += 1
+#         else:
+#             absent += 1
+    
+#     percent = present/(present+absent)*100
+#     return percent
+     
+
+# attendance_list = {
+#     "Bluey": "Present", 
+#     "Bingo": "Absent", 
+#     "Snickers": "Absent", 
+#     "Winton": "Absent"
+# }
+
+# print(attendance_rate(attendance_list))
+
+# Example Output: 50.0
+
+# -------------------------------------------------------------------------------------------
+# Problem 5: Average Book Ratings
+
+# Write a function average_book_ratings(), that calculates the average rating for
+# each book in a collection. The function takes one parameter: a dictionary book_ratings 
+# where each key-value pair represents a book title and a list of its ratings, respectively. 
+# Ratings are represented as floating-point numbers. The function should return a new 
+# dictionary with book titles as keys and their average rating.
+
+# def average_book_ratings(book_ratings):
+#     book_rating_avgs = {}
+#     for key, value in book_ratings.items():
+#         book_rating_avgs[key] = (sum(value)/len(value))
+#     print(book_rating_avgs)
+#     return book_rating_avgs
+
+
+# book_ratings = {
+#     "The Great Gatsby": [4.5, 3.0, 5.0],
+#     "To Kill a Mockingbird": [4.8, 5.0, 4.0, 4.9]
+# }
+
+# average_book_ratings(book_ratings)
+# Example Output:
+# {
+#     'The Great Gatsby': 4.166666666666667, 
+#     'To Kill a Mockingbird': 4.675000000000001
+# }
+
+# -------------------------------------------------------------------------------------------
+# Problem 6: Odd Keys Even Values
+
+# Write a function odd_keys_even_values() that takes in dictionary as a parameter, 
+# a dictionary with integer keys and values. The function returns a list of 
+# keys that are odd where their corresponding values are even.
+
+# def odd_keys_even_values(dictionary):
+#     odd_even = []
+#     for key, value in dictionary.items():
+#         if key % 2 != 0 and value % 2 == 0:
+#             odd_even.append(key)
+#     return odd_even
+
+
+# dictionary = {1: 2, 2: 6, 3: 5, 4: 4, 5: 8}
+# final_list = odd_keys_even_values(dictionary)
+# print(final_list)
+
+# Example Output:
+# [1, 5]
+
+# -------------------------------------------------------------------------------------------
+# Problem 7: Best Team
+
+# You're developing an analytics tool for a sports league. Your task is to write a 
+# function named team_with_best_average_score() that returns the team with the highest 
+# average score over a season.
+
+# The function should accept a list of dictionaries named games as a parameter. 
+# Each dictionary represents data from a game, including the "team_name", and 
+# the "score" they achieved in that game. The function calculates the average 
+# score for each team across all games and returns the team with the highest average score.
+
+# def team_with_best_average_score(games):
+#     team_avgs = {}
+#     for game in games:
+#         if game["team_name"] not in team_avgs:
+#             team_avgs[game["team_name"]] = [game["score"]]
+#         else:
+#             team_avgs[game["team_name"]].append(game["score"])
+
+#     highest_score_team = ""
+#     avg_score = 0
+#     for team, scores in team_avgs.items():
+#         if (sum(scores)/len(scores)) > avg_score:
+#             avg_score = (sum(scores)/len(scores))
+#             highest_score_team = team
+#     return highest_score_team
+        
+
+# games = [
+#     {"team_name": "Lions",
+#      "score": 23
+#     },
+#     {"team_name": "Tigers", 
+#      "score": 30
+#     },
+#     {"team_name": "Lions", 
+#      "score": 27
+#     },
+#     {"team_name": "Bears", 
+#      "score": 20
+#     },
+#     {"team_name": "Tigers", 
+#      "score": 24
+#     },
+#     {"team_name": "Bears", 
+#      "score": 22
+#     }
+# ]
+# #team_with_best_average_score(games)
+# print(team_with_best_average_score(games))
+
+# Example Output: Tigers
+
+# -------------------------------------------------------------------------------------------
+# Problem 8: First Unique Items
+
+# Write a function find_unique_items() that takes two lists list_a and list_b as parameters. 
+# The function identifies unique items from the lists and returns a dictionary with the 
+# items as keys and a boolean value as the value indicating whether the item is unique 
+# to the first list (True) or not (False).
+
+# def find_unique_items(list_a, list_b):
+#     unique = {}
+#     for a in list_a:
+#         if a not in list_b:
+#             unique[a] = True
+#     for b in list_b:
+#         if b not in list_a:
+#             unique[b] = False
+
+#     return unique
+
+# list_a = ["apple", "banana", "carrot"]
+# list_b = ["apple", "banana", "date"]
+# print(find_unique_items(list_a,list_b))
+# Example Output: {"carrot": True, "date": False}
+
+# -------------------------------------------------------------------------------------------
+
