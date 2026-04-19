@@ -301,13 +301,13 @@ import is_number
 # Problem 11: Counter
 # Write a function counter() that uses the range function to print numbers between 1 and a given stop value (inclusive).
 
-def counter(stop):
-    for value in range(stop):
-        if value != stop:
-            print(value + 1)
-
-
-counter(0)
+# def counter(stop):
+#     for value in range(stop):
+#         if value != stop:
+#             print(value + 1)
+#
+#
+# counter(0)
 #     pass
 # Example Usage: counter(7). Example Output:
 
@@ -332,7 +332,7 @@ counter(0)
 # Problem 12: Sum of 1 to 10
 # Write a function sum_ten() that returns the sum of numbers from 1 to 10.
 
-# def sum_ten():
+def sum_ten():
 #     pass
 # Example Usage: output = sum_ten()
 # Example Result: output = 55
