@@ -262,11 +262,11 @@
 # Problem 12: Sum of 1 to 10
 # Write a function sum_ten() that returns the sum of numbers from 1 to 10.
 
-def sum_ten():
-    return 55
-
-output = sum_ten()
-print(output)
+# def sum_ten():
+#     return 55
+#
+# output = sum_ten()
+# print(output)
 #     pass
 # Example Usage: output = sum_ten()
 # Example Result: output = 55
@@ -284,7 +284,14 @@ print(output)
 # Problem 13: Total Sum
 # Write a function sum_positive_range() that returns the sum of numbers from 1 to a given stop value (inclusive).
 
-# def sum_positive_range(stop):
+def sum_positive_range(stop):
+    sum = 0
+    while stop > 0:
+        sum = sum + stop
+        stop = stop - 1
+    return sum
+
+print(sum_positive_range(6))
 #     pass
 # Example Usage: sum = sum_positive_range(6)
 # Example Result: sum = 21
