@@ -141,22 +141,36 @@
 # neighboring elements to its left or right. If k is greater than the list's length, 
 # the solution should check for duplicates in the complete list. The function should return False otherwise.
 
-def has_duplicates(nums_p6, k_p6):
-    pass
+# loop through nums
+# for each element check for duplicates within k distance
+# def has_duplicates(nums_p6, k_p6):
+#     # check for k > len(list) return True if true else False
+#     for i in range(0, len(nums_p6)):
+#         if i - k_p6 < 0 :
+#            if nums_p6[i] in nums_p6[0: i-1] or nums_p6[i] in nums_p6[i+1: i+k_p6]:
+#                return True
+#         elif i + k_p6 >= len(nums_p6):
+#             if nums_p6[i] in nums_p6[i-k_p6: i-1] or nums_p6[i] in nums_p6[i+1: len(nums_p6)-1]:
+#                 return True
 
+        
+# def has_duplicates(nums, k):
+#     seen = set()
 
-nums_p6 = [5, 6, 8, 2, 6, 4, 9]
+#     for i in range(len(nums)):
+#         if nums[i] in seen:
+#             return True
 
-check1_p6 = has_duplicates(nums_p6, 2)
-print(check1_p6)
+#         seen.add(nums[i])
 
-check2_p6 = has_duplicates(nums_p6, 5)
-print(check2_p6)
+#         # keep window size ≤ k
+#         if len(seen) > k:
+#             seen.remove(nums[i - k])
 
-check3_p6 = has_duplicates(nums_p6, 3)
-print(check3_p6)
+#     return False
+# STUDY THIS SET VERSION
 
-
+ 
 # ==============================
 
 
@@ -168,12 +182,32 @@ print(check3_p6)
 # The elements present in a pair are equal
 # Return True if nums can be divided into n pairs, otherwise return False
 
-def divide_list(nums_p7):
-    pass
+# def divide_list(nums_p7):
+#     if len(nums_p7) % 2 != 0:
+#         return False
+#     pairs = {}
+#     for num in nums_p7:
+#         if num not in pairs:
+#             pairs[num] = 1
+#         else:
+#             pairs[num] += 1
+#     for key, value in pairs.items():
+#         if value % 2 != 0:
+            
+#             return False
+    
+    
+#     return True
 
 
-nums1_p7 = [3, 2, 3, 2, 2, 2]
-print(divide_list(nums1_p7))
+# nums1_p7 = [3, 2, 3, 2, 2, 2]
+# print(divide_list(nums1_p7))
 
-nums2_p7 = [1, 2, 3, 4]
-print(divide_list(nums2_p7))
+# nums2_p7 = [1, 2, 3, 4]
+# print(divide_list(nums2_p7))
+
+# nums3_p7 = [1, 2, 3, 4, 5]
+# print(divide_list(nums3_p7))
+
+# nums4_p7 = [1,1,1,1,1,1,1,1,1,1]
+# print(divide_list(nums4_p7))

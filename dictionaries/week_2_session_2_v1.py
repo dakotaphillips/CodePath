@@ -1,134 +1,141 @@
-# ==============================
-# Problem Set Version 1 (No Conflicts)
-# ==============================
-
-
 # Problem 1: Cast Vote
-# Write a function cast_vote() that records a vote for a candidate.
-# If the candidate doesn't exist, add them to the dictionary.
+# Write a function cast_vote() that records a vote for a candidate in an election. 
+# The function accepts a dictionary votes that maps candidates to their current number 
+# of votes and a string candidate that represents the candidate the user would like to
+# vote for. If the candidate doesn't exist, add them to the dictionary. The function 
+# should return the updated dictionary.
 
-def cast_vote(votes_p1, candidate_p1):
+def cast_vote(votes, candidate):
     pass
 
+# Example Input:
+votes = {"Alice": 5, "Bob": 3}
+cast_vote(votes, "Alice")
+print(votes)
+# Expected Output:
+# {'Alice': 6, 'Bob': 3}
 
-votes_p1 = {"Alice": 5, "Bob": 3}
-cast_vote(votes_p1, "Alice")
-print(votes_p1)
-
-cast_vote(votes_p1, "Gina")
-print(votes_p1)
-
-
-# ==============================
+cast_vote(votes, "Gina")
+print(votes)
+# Expected Output:
+# {'Alice': 6, 'Bob': 3, 'Gina': 1}
 
 
 # Problem 2: Keys in Common
-# Return a list of keys common to both dictionaries.
+# Write a function that takes in two dictionaries, dict1 and dict2 and finds all keys common 
+# to both dictionaries. The function returns a list of common keys.
 
-def common_keys(dict1_p2, dict2_p2):
+def common_keys(dict1, dict2):
     pass
 
-
-dict1_p2 = {"a": 1, "b": 2, "c": 3}
-dict2_p2 = {"b": 4, "c": 5, "d": 6}
-
-common_list_p2 = common_keys(dict1_p2, dict2_p2)
-print(common_list_p2)
-
-
-# ==============================
+# Example Input:
+dict1 = {"a": 1, "b": 2, "c": 3}
+dict2 = {"b": 4, "c": 5, "d": 6}
+common_list = common_keys(dict1, dict2)
+print(common_list)
+# Expected Output:
+# ['b', 'c']
 
 
 # Problem 3: Frequency Count
-# Count occurrences of each integer in a list.
+# Write a function that takes in a list of integers nums and counts the number of 
+# occurrences of each integer. The function returns the result as a dictionary with 
+# integers as keys and their counts as values.
 
-def count_occurrences(nums_p3):
+def count_occurrences(nums):
     pass
 
-
-nums_p3 = [1, 2, 2, 3, 3, 3, 4]
-print(count_occurrences(nums_p3))
-
-
-# ==============================
+# Example Input:
+nums = [1, 2, 2, 3, 3, 3, 4]
+print(count_occurrences(nums))
+# Expected Output:
+# {1: 1, 2: 2, 3: 3, 4: 1}
 
 
 # Problem 4: Highest Priority Task
-# Remove and return the task with highest priority.
-# If tie, return alphabetically first.
+# Given a dictionary tasks where keys are task names and values are priorities 
+# (1-10, where 10 is the highest priority), write a function get_highest_priority_task() 
+# that removes the task with the highest priority from the dictionary and returns its name.
 
-def get_highest_priority_task(tasks_p4):
+def get_highest_priority_task(tasks):
     pass
 
+# Example Input:
+tasks = {"task1": 8, "task2": 10, "task3": 9, "task4": 10, "task5": 7}
 
-tasks_p4 = {
-    "task1": 8,
-    "task2": 10,
-    "task3": 9,
-    "task4": 10,
-    "task5": 7
-}
+perform_task = get_highest_priority_task(tasks)
+print(perform_task)
+# Expected Output:
+# task2
 
-perform_task1_p4 = get_highest_priority_task(tasks_p4)
-print(perform_task1_p4)
+perform_task = get_highest_priority_task(tasks)
+print(perform_task)
+# Expected Output:
+# task4
 
-perform_task2_p4 = get_highest_priority_task(tasks_p4)
-print(perform_task2_p4)
+perform_task = get_highest_priority_task(tasks)
+print(perform_task)
+# Expected Output:
+# task3
 
-perform_task3_p4 = get_highest_priority_task(tasks_p4)
-print(perform_task3_p4)
-
-print(tasks_p4)
-
-
-# ==============================
+print(tasks)
+# Expected Output:
+# {'task1': 8, 'task5': 7}
 
 
 # Problem 5: Find Majority Element
-# Return element appearing more than n/2 times, else None.
+# Write a function find_majority_element() that takes in a list of integers elements and 
+# finds the majority element in the list.
 
-def find_majority_element(elements_p5):
+def find_majority_element(elements):
     pass
 
-
-elements_p5 = [2, 2, 1, 1, 1, 2, 2]
-print(find_majority_element(elements_p5))
-
-
-# ==============================
+# Example Input:
+elements = [2, 2, 1, 1, 1, 2, 2]
+print(find_majority_element(elements))
+# Expected Output:
+# 2
 
 
 # Problem 6: Has Duplicates
-# Return True if duplicates exist within k distance.
+# Write a function has_duplicates() that takes in a list of integers nums and a positive 
+# number k as parameters.
 
-def has_duplicates(nums_p6, k_p6):
+def has_duplicates(nums, k):
     pass
 
+# Example Input:
+nums = [5, 6, 8, 2, 6, 4, 9]
 
-nums_p6 = [5, 6, 8, 2, 6, 4, 9]
+check1 = has_duplicates(nums, 2)
+print(check1)
+# Expected Output:
+# False
 
-check1_p6 = has_duplicates(nums_p6, 2)
-print(check1_p6)
+check2 = has_duplicates(nums, 5)
+print(check2)
+# Expected Output:
+# True
 
-check2_p6 = has_duplicates(nums_p6, 5)
-print(check2_p6)
-
-check3_p6 = has_duplicates(nums_p6, 3)
-print(check3_p6)
-
-
-# ==============================
+check3 = has_duplicates(nums, 3)
+print(check3)
+# Expected Output:
+# True
 
 
 # Problem 7: Make Pairs
-# Return True if list can be divided into equal pairs.
+# Write a function divide_list() that takes in an integer list nums consisting of 2*n integers as parameters.
 
-def divide_list(nums_p7):
+def divide_list(nums):
     pass
 
+# Example Input:
+nums = [3,2,3,2,2,2]
+print(divide_list(nums))
+# Expected Output:
+# True
 
-nums1_p7 = [3, 2, 3, 2, 2, 2]
-print(divide_list(nums1_p7))
-
-nums2_p7 = [1, 2, 3, 4]
-print(divide_list(nums2_p7))
+nums = [1,2,3,4]
+print(divide_list(nums))
+# Expected Output:
+# False
