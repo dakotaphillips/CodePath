@@ -3,6 +3,7 @@
 # Students will be introduced to basic Python programming concepts necessary for technical interviews. 
 # The curriculum covers writing and calling 
 # functions, variable manipulation, and list operations through a series of problem sets.
+import is_number
 
 # These exercises include practical tasks such as organizing code snippets, performing mathematical operations, 
 # and implementing simple algorithms.
@@ -112,13 +113,39 @@
 
 # Example Usage:
 
-# output = classify_age(18)
+# daef classify_age(age):
+#     if ge.is_integer():
+#         youAre = "gay"
+#         if age < 18:
+#             youAre = "child"
+#         else:
+#             youAre = "adult"
+#         return youAre
+#     else:
+#         return "Try again"
+#
+#
+# output = classify_age("a")
 # print(output)
 # output = classify_age(7)
 # print(output)
 # output = classify_age(50)
-# print(output)
+#print(output)
 # Output:
+
+
+# x = 7.34
+# try:
+#     number = int(x)
+#     print(number)
+# except ValueError:
+#     print("Please enter a number")
+#
+
+# if is_number(x):
+#     print(x)
+# else:
+#     print (is_number(x))
 
 # adult
 # child
@@ -135,20 +162,31 @@
 
 
 # Problem 7: What time is it?
-# Let's put what we learned in Problems 1-4 all together! Write a function named what_time_is_it() that takes an integer hour as a parameter.
+# Let's put what we learned in Problems 1-4 all together! Write a function named
+# what_time_is_it() that takes an integer hour as a parameter.
 # If hour is 2, the function should return "taco time 🌮".
 # If hour is 12, the function should return "peanut butter jelly time 🥪”.
 # Otherwise, the function should return "nap time 😴".
 
-# Example Usage:
-
+# def what_time_is_it(time):
+#     if time == 2:
+#         return"taco time"
+#     elif time == 12:
+#         return "peanut butter jelly time🥪"
+#     else:
+#         return "nap time"
+#
+#
+#
+# # Example Usage:
+#
 # time = what_time_is_it(2)
 # print(time)
 # time = what_time_is_it(7)
 # print(time)
 # time = what_time_is_it(12)
 # print(time)
-# Output:
+
 
 # taco time 🌮
 # nap time 😴
@@ -165,7 +203,8 @@
 
 
 # Problem 8: Blackjack
-# In the game Blackjack, players try to draw a hand of cards that totals as close to 21 as possible. Players "bust" if their cards total more than 21. Players say "Hit me!" if they want the dealer to give them another card.
+# In the game Blackjack, players try to draw a hand of cards that totals as close to 21 as possible.
+# Players "bust" if their cards total more than 21. Players say "Hit me!" if they want the dealer to give them another card.
 
 # Write a function called blackjack() that takes an integer score as a parameter.
 # If score equals 21, print "Blackjack!".
@@ -174,7 +213,17 @@
 # If score is less than 17, print "Hit me!".
 
 # Example Usage:
-
+# def blackjack(score):
+#     if score > 21:
+#         print("Bust")
+#     elif score == 21:
+#         print("Blackjack")
+#     elif score  < 21 and score >= 17:
+#         print("Nice hands")
+#     else:
+#         print("Hit me")
+#
+#
 # blackjack(21)
 # blackjack(24)
 # blackjack(19)
@@ -197,11 +246,21 @@
 
 
 # Problem 9: First Item
-# Write a function get_first() that takes in a list as a parameter and returns the first item in the list. Return None if the list is empty.
+# Write a function get_first() that takes in a list as a parameter and
+# returns the first item in the list. Return None if the list is em
 
 # def get_first(lst):
-#     pass
-# Example Input: [3,1,6,7,5]
+#     return lst[0]
+#
+# def get_last(lst):
+#     for num in range(len(lst), -1, -1):
+#         print(num)
+
+# example_list = [1, 2, 3, 4, 5]
+#
+# print(get_first(example_list))
+# print(get_last(example_list))
+
 # Example Output: 3
 
 # Note: pass is a keyword that is used as a placeholder for future code
@@ -220,9 +279,14 @@
 # Write a function get_last() that takes in a list as a parameter and returns the last item in the list. Return None if the list is empty.
 
 # def get_last(lst):
-#     pass
-# Example Input: [3,1,6,7,5]
-# Example Output: 5
+#    if len(lst) == 0:
+#        return None
+#    else:
+#        return lst[-1]
+#
+# #     pass
+# list = []
+# print(get_last(list))
 
 
 
@@ -238,6 +302,12 @@
 # Write a function counter() that uses the range function to print numbers between 1 and a given stop value (inclusive).
 
 # def counter(stop):
+#     for value in range(stop):
+#         if value != stop:
+#             print(value + 1)
+#
+#
+# counter(0)
 #     pass
 # Example Usage: counter(7). Example Output:
 
@@ -262,7 +332,7 @@
 # Problem 12: Sum of 1 to 10
 # Write a function sum_ten() that returns the sum of numbers from 1 to 10.
 
-# def sum_ten():
+def sum_ten():
 #     pass
 # Example Usage: output = sum_ten()
 # Example Result: output = 55
