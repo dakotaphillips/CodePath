@@ -284,14 +284,14 @@
 # Problem 13: Total Sum
 # Write a function sum_positive_range() that returns the sum of numbers from 1 to a given stop value (inclusive).
 
-def sum_positive_range(stop):
-    sum = 0
-    while stop > 0:
-        sum = sum + stop
-        stop = stop - 1
-    return sum
-
-print(sum_positive_range(6))
+# def sum_positive_range(stop):
+#     sum = 0
+#     while stop > 0:
+#         sum = sum + stop
+#         stop = stop - 1
+#     return sum
+#
+# print(sum_positive_range(6))
 #     pass
 # Example Usage: sum = sum_positive_range(6)
 # Example Result: sum = 21
@@ -310,8 +310,15 @@ print(sum_positive_range(6))
 # Write a function sum_range() that returns the sum of numbers from a given start value to a given stop value (inclusive).
 
 # def sum_range(start, stop):
-#     pass
-# Example Usage: sum = sum_range(3, 9)
+#    sum = 0
+#    for num in range(start, stop + 1):
+#        sum += num
+#    return sum
+#
+#
+#
+#
+# print(sum_range(3, 9))
 # Example Result: sum = 42
 
 
@@ -327,8 +334,15 @@ print(sum_positive_range(6))
 # Problem 15: Negative Numbers
 # Write a function print_negatives() that takes a list of integers lst and prints all negative numbers in the list.
 
-# def print_negatives(lst):
-# Example Usage: print_negatives([3,-2,2,1,-5])
+def print_negatives(lst):
+    for i in lst:
+        if i < 0:
+            print(i)
+
+
+
+
+print_negatives([3,-2,2,1,-5])
 # Example Output:
 
 # -2
