@@ -4,38 +4,45 @@
 # The function adds the points to the current score of player in the dictionary 
 # and returns the updated dictionary. If the player does not exist in scores, then add them.
 
-def update_score(scores, players, points):
-    pass
+# def update_score(scores, players, points):
+#     if players in scores:
+#         scores[players] += points
+#     else:
+#         scores[players] = points
 
-# Example Input:
-scores = {"Alice": 100, "Bob": 90}
-update_score(scores, "Alice", 10)
-print(scores)
-# Expected Output:
-# {'Alice': 110, 'Bob': 90}
+# # Example Input:
+# scores = {"Alice": 100, "Bob": 90}
+# update_score(scores, "Alice", 10)
+# print(scores)
+# # Expected Output:
+# # {'Alice': 110, 'Bob': 90}
 
-update_score(scores, "Calvin", 20)
-print(scores)
-# Expected Output:
-# {'Alice': 110, 'Bob': 90, 'Calvin': 20}
+# update_score(scores, "Calvin", 20)
+# print(scores)
+# # Expected Output:
+# # {'Alice': 110, 'Bob': 90, 'Calvin': 20}
 
-update_score(scores, "Calvin", 5)
-print(scores)
-# Expected Output:
-# {'Alice': 110, 'Bob': 90, 'Calvin': 25}
+# update_score(scores, "Calvin", 5)
+# print(scores)
+# # Expected Output:
+# # {'Alice': 110, 'Bob': 90, 'Calvin': 25}
 
 
 # Problem 2: Dictionary Intersection
 # Write a function dict_intersection() that takes in two dictionaries as 
 # parameters and returns a new dictionary containing the key-value pairs found in both dictionaries.
 
-def dict_intersection(d1, d2):
-    pass
+# def dict_intersection(d1, d2):
+#     new_dict = {}
+#     for key, value in d1.items():
+#         if key in d2 and value == d2[key]:
+#             new_dict[key] = value
+#     return new_dict
 
-# Example Input:
-d1 = {'a': 1, 'b': 2, 'c': 3}
-d2 = {'b': 2, 'c': 4}
-
+# # Example Input:
+# d1 = {'a': 1, 'b': 2, 'c': 3, 'd': 10}
+# d2 = {'b': 2, 'c': 4, 'd': 10}
+# print(dict_intersection(d1,d2))
 # Expected Output:
 # {'b': 2}
 
@@ -45,21 +52,34 @@ d2 = {'b': 2, 'c': 4}
 # The function should iterate through the dictionary and remove all items that has a value 
 # less than price_threshold. The function also returns a list of all items that are removed. 
 # If no item satisfies the condition, return None.
+# 1 loop through dict
+# 2 remove items < than threshold
+# 3 return a list of all the removed items
+# 4 if none return None
 
-def remove_items_below_price(items, price_threshold):
-    pass
+# def remove_items_below_price(items, price_threshold):
+#     removed = []
+#     for fruit, price in items.items():
+#         if price < price_threshold:
+#             removed.append(fruit)
+#     for key in removed:
+#         del items[key]
+    
+#     if not removed:
+#         return None
+#     return removed
 
-# Example Input:
-items = {"apple": 1.99, "banana": 0.99, "cherry": 3.49, "date": 0.69}
-removed_list = remove_items_below_price(items, 1.00)
-print(removed_list)
-# Expected Output:
-# ["banana", "date"]
+# # Example Input:
+# items = {"apple": 1.99, "banana": 0.99, "cherry": 3.49, "date": 0.69}
+# removed_list = remove_items_below_price(items, 1.00)
+# print(removed_list)
+# # Expected Output:
+# # ["banana", "date"]
 
-removed_list_two = remove_items_below_price(items, 1.00)
-print(removed_list_two)
-# Expected Output:
-# None
+# removed_list_two = remove_items_below_price(items, 1.00)
+# print(removed_list_two)
+# # Expected Output:
+# # None
 
 
 # Problem 4: Find Odd Occurrences
@@ -68,13 +88,26 @@ print(removed_list_two)
 # The function should find the two unique numbers and return them as a list. 
 # Assume each problem has exactly one solution.
 
-def find_odd_occurrences(numbers):
-    pass
+# def find_odd_occurrences(numbers):
+#     occur = {}
+#     odd_n = []
+#     for num in numbers:
+#         if num not in occur:
+#             occur[num] = 1
+#         else:
+#             occur[num] += 1
+    
+#     for key, value in occur.items():
+#         if value % 2 != 0:
+#             odd_n.append(key)
+    
+#     return odd_n
+        
 
-# Example Input:
-numbers = [1,4,2,3,2,3,3,4,4,4]
-odd_list = find_odd_occurrences(numbers)
-print(odd_list)
+# # Example Input:
+# numbers = [1,4,2,3,2,3,3,4,4,4]
+# odd_list = find_odd_occurrences(numbers)
+# print(odd_list)
 # Expected Output:
 # [1, 3]
 
@@ -84,13 +117,28 @@ print(odd_list)
 # The function returns the mode (the most frequently occurring number) and if there is a tie, 
 # return the element which appeared first in the list.
 
-def find_mode(lst):
-    pass
+# def find_mode(lst):
+#     mode = {}
+#     for key in lst:
+#         if key not in mode:
+#             mode[key] = 1
+#         else:
+#             mode[key] += 1
+#     key = 0
+#     value = 0
 
-# Example Input:
-lst = [1,2,3,2,3,3,4,4,4,4]
-mode = find_mode(lst)
-print(mode)
+#     for k, v in mode.items():
+#         if v > value:
+#             key = k
+#             value = v
+    
+
+#     return key
+
+# # Example Input:
+# lst = [1,2,3,2,3,3,4,4,4,4,5,5,5,5]
+# mode = find_mode(lst)
+# print(mode)
 # Expected Output:
 # 4
 

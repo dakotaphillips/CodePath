@@ -172,45 +172,45 @@
 # genre, and rating. The function calculates the average rating for each genre 
 # and returns the genre with the highest average rating.
 
-#  
-def most_popular_genre(movies):
-    genre_ratings = {}
-    for movie in movies:
-        if movie["genre"] not in genre_ratings:
-            genre_ratings[movie["genre"]] = [movie["rating"]] 
-        else:
-            genre_ratings[movie["genre"]].append(movie["rating"])
+# #  
+# def most_popular_genre(movies):
+#     genre_ratings = {}
+#     for movie in movies:
+#         if movie["genre"] not in genre_ratings:
+#             genre_ratings[movie["genre"]] = [movie["rating"]] 
+#         else:
+#             genre_ratings[movie["genre"]].append(movie["rating"])
     
-    large_avg = 0
-    genre = ""
-    for k, v in genre_ratings.items():
-        summed = sum(v)/len(v)
-        if summed > large_avg:
-            large_avg = summed
-            genre = k
-    return genre
+#     large_avg = 0
+#     genre = ""
+#     for k, v in genre_ratings.items():
+#         summed = sum(v)/len(v)
+#         if summed > large_avg:
+#             large_avg = summed
+#             genre = k
+#     return genre
 
 
-movies = [
-    {"title": "Inception",
-     "genre": "Science Fiction",
-     "rating": 8.8
-    },
-    {"title": "The Matrix", 
-     "genre": "Science Fiction",
-     "rating": 8.7
-    },
-    {"title": "Pride and Prejudice", 
-     "genre": "Romance",
-     "rating": 7.8
-    },
-    {"title": "Sense and Sensibility", 
-     "genre": "Romance",
-     "rating": 7.7
-    }
-]
+# movies = [
+#     {"title": "Inception",
+#      "genre": "Science Fiction",
+#      "rating": 8.8
+#     },
+#     {"title": "The Matrix", 
+#      "genre": "Science Fiction",
+#      "rating": 8.7
+#     },
+#     {"title": "Pride and Prejudice", 
+#      "genre": "Romance",
+#      "rating": 7.8
+#     },
+#     {"title": "Sense and Sensibility", 
+#      "genre": "Romance",
+#      "rating": 7.7
+#     }
+# ]
 
-print(most_popular_genre(movies))
+# print(most_popular_genre(movies))
 
 # Example Output: Science Fiction
 
